@@ -1,0 +1,26 @@
+ChatGlobal/
+├── src/
+│   ├── com/
+│   │   ├── chatglobal/
+│   │   │   ├── bungee/
+│   │   │   │   ├── BungeePlugin.java
+│   │   │   │   ├── BungeeChatListener.java
+│   │   │   │   ├── BungeeCommandHandler.java
+│   │   │   │   └── BungeeEventManager.java
+│   │   │   ├── spigot/
+│   │   │   │   ├── SpigotPlugin.java
+│   │   │   │   ├── SpigotChatListener.java
+│   │   │   │   ├── SpigotCommandHandler.java
+│   │   │   ├── velocity/
+│   │   │   │   ├── VelocityPlugin.java
+│   │   │   │   ├── VelocityChatListener.java
+│   │   │   │   └── VelocityCommandHandler.java
+│   │   │   ├── common/
+│   │   │   │   ├── ChatGlobalPlugin.java
+│   │   │   │   ├── ChatManager.java
+│   │   │   │   ├── PluginConfig.java
+│   │   │   │   └── ConfigLoader.java
+│   └── resources/
+│       ├── config.yml
+│       ├── plugin.yml
+├── pom.xml

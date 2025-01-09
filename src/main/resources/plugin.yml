@@ -1,0 +1,26 @@
+name: ChatGlobal
+version: 1.0
+main: com.chatglobal.common.ChatGlobalPlugin  # Clase principal centralizada
+api-version: 1.16  # Versión mínima de la API de Bukkit/Spigot
+
+# Dependencias
+depend: [PlaceholderAPI]  # Dependencia necesaria como PlaceholderAPI
+softdepend: [WorldEdit]  # Softdependencia opcional
+
+# Comandos disponibles
+commands:
+  dualchat:
+    description: Enviar mensaje al chat global
+    usage: /<command> <message>
+  setserver:
+    description: Establecer un servidor en la lista de servidores del proxy
+    usage: /<command> <server_name>
+
+# Permisos disponibles
+permissions:
+  chatglobal.chat.global:
+    description: Permiso para enviar mensajes al chat global
+    default: op
+  chatglobal.server.manage:
+    description: Permiso para gestionar servidores en el proxy
+    default: op

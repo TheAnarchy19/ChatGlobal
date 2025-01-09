@@ -1,0 +1,20 @@
+# Configuración de servidores
+servers:
+  allowedGlobalChat:
+    - server1
+    - server2
+    - server3
+  deniedGlobalChat:
+    - server4
+    - server5
+
+# Configuración de formato de chat
+chatSettings:
+  format: '{PLAYER_NAME}: {MESSAGE}'  # Formato del mensaje en el chat global
+  prefix: '[Global]'                 # Prefijo a añadir al mensaje
+
+# Configuración de habilitación de plataformas
+pluginConfig:
+  enableBungee: true
+  enableVelocity: false
+  enableSpigot: true
