@@ -9,14 +9,11 @@ public class ChatManager {
     }
 
     public static void loadSpigotSettings() {
-        // Cargar configuraciones específicas para Spigot
     }
 
     public static void loadBungeeSettings() {
-        // Cargar configuraciones específicas para Bungee
     }
 
     public static void loadVelocitySettings() {
-        // Cargar configuraciones específicas para Velocity
     }
 }

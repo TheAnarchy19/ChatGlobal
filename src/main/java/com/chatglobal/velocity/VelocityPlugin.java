@@ -18,28 +18,24 @@ public class VelocityPlugin {
 
     @EventHandler
     public void onChat(ChatEvent event) {
-        if (event.getMessage().startsWith("/")) return;  // Ignorar comandos
+        if (event.getMessage().startsWith("/")) return;  
 
         String message = event.getMessage();
         String playerName = event.getPlayer().getUsername();
 
-        // Formatear el mensaje utilizando la configuración
         String formattedMessage = ChatGlobalPlugin.getConfig().getString("chatSettings.prefix") + " " +
                                   ChatGlobalPlugin.getConfig().getString("chatSettings.format")
                                   .replace("{PLAYER_NAME}", playerName)
                                   .replace("{MESSAGE}", message);
 
-        // Si PlaceholderAPI está habilitado en Spigot, reemplazar placeholders
         if (ChatGlobalPlugin.getConfig().getBoolean("pluginConfig.enableSpigot")) {
             formattedMessage = PlaceholderAPI.setPlaceholders(event.getPlayer(), formattedMessage);
         }
 
-        // Enviar el mensaje a todos los jugadores de Velocity
         for (Player player : server.getAllPlayers()) {
             player.sendMessage(formattedMessage);
         }
 
-        // Cancelar el evento para evitar que el mensaje se muestre solo en el servidor de Velocity
         event.setResult(ChatEvent.ChatResult.denied());
     }
 }

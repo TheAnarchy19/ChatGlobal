@@ -20,10 +20,8 @@ public class ChatGlobalPlugin {
     }
 
     public static void enablePlaceholderAPI() {
-        // Activar PlaceholderAPI si está disponible en Spigot
         if (ConfigLoader.isSpigotEnabled()) {
             if (PlaceholderAPI.getPlugin() != null) {
-                // Aquí puedes configurar los placeholders si lo deseas
                 System.out.println("PlaceholderAPI habilitado en Spigot.");
             } else {
                 System.out.println("PlaceholderAPI no encontrado en Spigot.");
@@ -32,6 +30,5 @@ public class ChatGlobalPlugin {
     }
 
     public static void sendMessageToAll(String message) {
-        // Aquí podrías manejar la transmisión del mensaje entre servidores
     }
 }
